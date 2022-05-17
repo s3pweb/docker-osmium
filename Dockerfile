@@ -1,6 +1,6 @@
-FROM alpine:3.6
+FROM alpine:3.13.1
 
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+#RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN apk add --no-cache \
         boost-dev \
@@ -12,9 +12,10 @@ RUN apk add --no-cache \
         geos-dev \
         git \
         make \
-        proj4-dev \
+        proj-dev \
         sparsehash \
-        zlib-dev
+        zlib-dev \
+        lz4-dev
 
 RUN mkdir /code
 
